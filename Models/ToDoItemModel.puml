@@ -1,0 +1,8 @@
+@startuml
+class ToDoItemModel {
+    + ItemId : int <<get>> <<set>>
+    + ItemName : string <<get>> <<set>>
+    + ItemDescription : string <<get>> <<set>>
+    + ItemStatus : bool <<get>> <<set>>
+}
+@enduml

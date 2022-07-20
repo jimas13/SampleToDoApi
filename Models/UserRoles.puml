@@ -1,0 +1,6 @@
+@startuml
+class UserRoles {
+    + <<const>> Admin : string = "Admin"
+    + <<const>> User : string = "User"
+}
+@enduml

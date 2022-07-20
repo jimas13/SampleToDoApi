@@ -1,0 +1,18 @@
+@startuml
+!include .\\Program.puml
+!include .\\Startup.puml
+!include .\\WeatherForecast.puml
+!include .\\Authentication\ApplicationUser.puml
+!include .\\Authentication\Response.puml
+!include .\\Controllers\AuthenticationController.puml
+!include .\\Controllers\ToDoItemController.puml
+!include .\\Controllers\WeatherForecastController.puml
+!include .\\Migrations\20210915065630_InitialCreate.puml
+!include .\\Migrations\20210915065630_InitialCreate.Designer.puml
+!include .\\Migrations\ApplicationDbContextModelSnapshot.puml
+!include .\\Models\ApplicationDbContext.puml
+!include .\\Models\LoginModel.puml
+!include .\\Models\RegisterModel.puml
+!include .\\Models\ToDoItemModel.puml
+!include .\\Models\UserRoles.puml
+@enduml

@@ -1,0 +1,13 @@
+@startuml
+class ToDoItemController {
+    + ToDoItemController(context:ApplicationDbContext)
+    + <<async>> GetToDoItems() : Task<ActionResult<IEnumerable<ToDoItemModel>>>
+    + <<async>> GetToDoItemModel(id:int) : Task<ActionResult<ToDoItemModel>>
+    + <<async>> PutToDoItemModel(id:int, toDoItemModel:ToDoItemModel) : Task<IActionResult>
+    + <<async>> PostToDoItemModel(toDoItemModel:ToDoItemModel) : Task<ActionResult<ToDoItemModel>>
+    + <<async>> DeleteToDoItemModel(id:int) : Task<IActionResult>
+    - ToDoItemModelExists(id:int) : bool
+}
+ControllerBase <|-- ToDoItemController
+ToDoItemController --> "_context" ApplicationDbContext
+@enduml

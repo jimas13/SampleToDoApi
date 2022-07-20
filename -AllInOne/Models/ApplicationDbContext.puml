@@ -1,0 +1,12 @@
+@startuml
+class ApplicationDbContext {
+    + ApplicationDbContext(options:DbContextOptions<ApplicationDbContext>)
+    # <<override>> OnModelCreating(builder:ModelBuilder) : void
+}
+class "IdentityDbContext`1"<T> {
+}
+class "DbSet`1"<T> {
+}
+"IdentityDbContext`1" "<ApplicationUser>" <|-- ApplicationDbContext
+ApplicationDbContext --> "ToDoItems<ToDoItemModel>" "DbSet`1"
+@enduml

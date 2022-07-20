@@ -1,0 +1,12 @@
+@startuml
+class AuthenticationController {
+    - <<readonly>> userManager : UserManager<ApplicationUser>
+    - <<readonly>> roleManager : RoleManager<IdentityRole>
+    - <<readonly>> _configuration : IConfiguration
+    + AuthenticationController(userManager:UserManager<ApplicationUser>, roleManager:RoleManager<IdentityRole>, configuration:IConfiguration)
+    + <<async>> Login(model:LoginModel) : Task<IActionResult>
+    + <<async>> Register(model:RegisterModel) : Task<IActionResult>
+    + <<async>> RegisterAdmin(model:RegisterModel) : Task<IActionResult>
+}
+ControllerBase <|-- AuthenticationController
+@enduml
